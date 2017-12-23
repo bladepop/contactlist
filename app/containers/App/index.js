@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
@@ -36,10 +36,15 @@ const MainContainer = styled.main`
   
 `;
 
+const TitleLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default function App() {
   return (
     <AppContainer>
-      <AppBar titleElement={<FormattedMessage {...messages.title} />} rightElement={<SearchBar />} />
+      <AppBar titleElement={<TitleLink to="/"><FormattedMessage {...messages.title} /></TitleLink>} rightElement={<SearchBar />} />
       <MainContainer>
         <Switch>
           <Route exact path="/" component={ContactsPage} />

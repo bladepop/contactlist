@@ -12,14 +12,14 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
+import StatusMessage from 'components/StatusMessage/Loadable';
+
 import messages from './messages';
 
 export default class NotFound extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <StatusMessage message={<FormattedMessage {...messages.header} />} />
     );
   }
 }
