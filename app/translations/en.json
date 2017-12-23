@@ -1,1 +1,8 @@
-[]
+{
+  "app.components.App.title": "Contact List",
+  "app.components.ContactCard.driverRank": "Driver Rank",
+  "app.components.ContactCard.email": "Email",
+  "app.components.ContactCard.phone": "Phone Number",
+  "app.components.NotFoundPage.header": "Well.. Error 404, This page does not seem to exist :(",
+  "app.components.SearchBar.placeholder": "search..."
+}

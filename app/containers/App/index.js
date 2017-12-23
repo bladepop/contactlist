@@ -17,7 +17,7 @@ import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 
-import HomePage from 'containers/HomePage/Loadable';
+import ContactsPage from 'containers/ContactsPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import AppBar from 'components/AppBar/Loadable';
 import SearchBar from 'components/SearchBar/Loadable';
@@ -42,7 +42,7 @@ export default function App() {
       <AppBar titleElement={<FormattedMessage {...messages.title} />} rightElement={<SearchBar />} />
       <MainContainer>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={ContactsPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </MainContainer>

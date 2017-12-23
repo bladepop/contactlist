@@ -1,0 +1,8 @@
+{
+  "app.components.App.title": "Kontaktliste",
+  "app.components.ContactCard.driverRank": "Fahrerrang",
+  "app.components.ContactCard.email": "Email",
+  "app.components.ContactCard.phone": "Telefonnummer",
+  "app.components.NotFoundPage.header": "Nun .. Fehler 404, Diese Seite scheint nicht zu existieren :(",
+  "app.components.SearchBar.placeholder": "suche..."
+}
