@@ -14,16 +14,28 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import styled from 'styled-components';
+
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import AppBar from 'components/AppBar/Loadable';
+import SearchBar from 'components/SearchBar/Loadable';
+
+import { APP_TITLE } from './constants';
+
+const AppContainer = styled.div`
+  background: ${(props) => props.theme.background};
+  min-height: calc(100VH);
+`;
 
 export default function App() {
   return (
-    <div>
+    <AppContainer>
+      <AppBar titleElement={APP_TITLE} rightElement={<SearchBar />} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
       </Switch>
-    </div>
+    </AppContainer>
   );
 }

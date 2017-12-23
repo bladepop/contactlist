@@ -12,6 +12,7 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
@@ -44,6 +45,7 @@ import { translationMessages } from './i18n';
 
 // Import CSS reset and Global Styles
 import './global-styles';
+import theme from './theme';
 
 // Create redux store with history
 const initialState = {};
@@ -55,9 +57,11 @@ const render = (messages) => {
   ReactDOM.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
+        <ThemeProvider theme={theme}>
+          <ConnectedRouter history={history}>
+            <App />
+          </ConnectedRouter>
+        </ThemeProvider>
       </LanguageProvider>
     </Provider>,
     MOUNT_NODE

@@ -10,3 +10,4 @@
  */
 
 export const DEFAULT_LOCALE = 'en';
+export const APP_TITLE = 'Contact List';
