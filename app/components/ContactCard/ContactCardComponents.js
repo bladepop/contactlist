@@ -15,9 +15,9 @@ export const DriverTypeIcon = styled.img`
 
 export const DriverType = ({ driverType, ...props }) => {
   let src;
-  switch (driverType) {
-    case 'Professional': src = Professional; break;
-    case 'Citizen':
+  switch (driverType.toLowerCase()) {
+    case 'professional': src = Professional; break;
+    case 'citizen':
     default: src = Citizen; break;
   }
   return <DriverTypeIcon src={src} {...props} />;
