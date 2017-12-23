@@ -13,6 +13,7 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 
@@ -21,7 +22,7 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import AppBar from 'components/AppBar/Loadable';
 import SearchBar from 'components/SearchBar/Loadable';
 
-import { APP_TITLE } from './constants';
+import messages from './messages';
 
 const AppContainer = styled.div`
   background: ${(props) => props.theme.background};
@@ -31,7 +32,7 @@ const AppContainer = styled.div`
 export default function App() {
   return (
     <AppContainer>
-      <AppBar titleElement={APP_TITLE} rightElement={<SearchBar />} />
+      <AppBar titleElement={<FormattedMessage {...messages.title} />} rightElement={<SearchBar />} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
