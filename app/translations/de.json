@@ -4,5 +4,7 @@
   "app.components.ContactCard.email": "Email",
   "app.components.ContactCard.phone": "Telefonnummer",
   "app.components.NotFoundPage.header": "Nun .. Fehler 404, Diese Seite scheint nicht zu existieren :(",
-  "app.components.SearchBar.placeholder": "suche..."
+  "app.components.SearchBar.placeholder": "suche...",
+  "app.components.ContactsPage.loading": "Laden, bitte warten...",
+  "app.components.ContactsPage.error": "Oh, etwas ist schief gelaufen :("
 }
