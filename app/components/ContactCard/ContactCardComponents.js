@@ -27,14 +27,13 @@ DriverType.propTypes = { driverType: PropTypes.string.isRequired };
 
 
 export const ProfileImage = styled.div`
-  background-image: url(${(props) => props.src || Placeholder});
+  background: url(${(props) => props.src}), url(${Placeholder}) 50% 0%;
   background-size: cover;
   width: ${(props) => props.size}px;
   height:${(props) => props.size}px;
   margin: 0 auto 0px;
   transition: 0.15s all linear;
 `;
-
 
 export const CardText = styled.div`
   color: ${(props) => props.theme.mainText};
