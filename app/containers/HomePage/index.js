@@ -11,11 +11,15 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
 
-import ContactCard from 'components/ContactCard/Loadable';
+import ContactList from 'components/ContactList/Loadable';
+import media from '../../mediaTemplates';
 
-import messages from './messages';
+const MainContainer = styled.main`
+  padding: 76px 0;
+  ${media.tablet`padding: 40px 0;`}
+  
+`;
 
 const data = [
   {
@@ -233,34 +237,12 @@ const data = [
 
 ];
 
-const ContactList = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
-  
-`;
-
-const ItemWrapper = styled.div`
-  display: block;
-  margin: 5px;
-`;
-
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <main style={{ padding: '76px 0' }}>
-        <ContactList>
-          { data.map((driver, i) =>
-            (<ItemWrapper key={i}>
-              <ContactCard contact={driver} />
-            </ItemWrapper>))}
-        </ContactList>
-      </main>
+      <MainContainer>
+        <ContactList contacts={data} />
+      </MainContainer>
     );
   }
 }
