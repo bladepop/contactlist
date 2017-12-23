@@ -14,8 +14,8 @@ import { CardText, CardHiddenText, CardWrapper, ProfileImage, DriverType, Contac
 
 
 class ContactCard extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  render(props) {
-    const { contact } = props;
+  render() {
+    const { contact } = this.props;
     return (
       <CardWrapper>
         <ProfileImage src={contact.profile_image} size="144" />

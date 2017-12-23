@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import Citizen from './citizen.svg';
 import Professional from './professional.svg';
+import Placeholder from './person-placeholder.jpg';
 
 export const DriverTypeIcon = styled.img`
   margin-top: -30px;
@@ -26,7 +27,7 @@ DriverType.propTypes = { driverType: PropTypes.string.isRequired };
 
 
 export const ProfileImage = styled.div`
-  background-image: url(${(props) => props.src});
+  background-image: url(${(props) => props.src || Placeholder});
   background-size: cover;
   width: ${(props) => props.size}px;
   height:${(props) => props.size}px;
