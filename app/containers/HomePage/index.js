@@ -10,16 +10,9 @@
  */
 
 import React from 'react';
-import styled from 'styled-components';
 
 import ContactList from 'components/ContactList/Loadable';
-import media from '../../mediaTemplates';
 
-const MainContainer = styled.main`
-  padding: 76px 0;
-  ${media.tablet`padding: 40px 0;`}
-  
-`;
 
 const data = [
   {
@@ -240,9 +233,7 @@ const data = [
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <MainContainer>
-        <ContactList contacts={data} />
-      </MainContainer>
+      <ContactList contacts={data} />
     );
   }
 }

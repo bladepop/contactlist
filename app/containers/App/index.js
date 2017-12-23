@@ -22,6 +22,7 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import AppBar from 'components/AppBar/Loadable';
 import SearchBar from 'components/SearchBar/Loadable';
 
+import media from '../../mediaTemplates';
 import messages from './messages';
 
 const AppContainer = styled.div`
@@ -29,14 +30,22 @@ const AppContainer = styled.div`
   min-height: calc(100VH);
 `;
 
+const MainContainer = styled.main`
+  padding: 76px 0;
+  ${media.tablet`padding: 40px 0;`}
+  
+`;
+
 export default function App() {
   return (
     <AppContainer>
       <AppBar titleElement={<FormattedMessage {...messages.title} />} rightElement={<SearchBar />} />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <MainContainer>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </MainContainer>
     </AppContainer>
   );
 }
