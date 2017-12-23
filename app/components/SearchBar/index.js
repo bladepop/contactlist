@@ -14,16 +14,17 @@ import SearchIcon from './search-icon.png';
 
 const SearchBarInput = styled.input`
   border-radius: 30px;
-  padding: 8px 10px;
-  width: 200px;
-  min-width: 100px;
-  font-size: 0.75em;
-  transition: width 0.2s linear;
+  padding: 7px 20px;
+  width: 372px;
+  max-width: calc(50VW);
+  font-size: 0.9em;
+  transition: all 0.2s linear;
   
   background: white url(${SearchIcon}) no-repeat right 10px top 5px/20px 20px;
   
   &:focus {
-    width: 210px;
+    width: 400px;
+    max-width: calc(55VW);
   }
   
   ::placeholder {

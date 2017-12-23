@@ -9,7 +9,7 @@ import Placeholder from './person-placeholder.jpg';
 
 export const DriverTypeIcon = styled.img`
   margin-top: -30px;
-  margin-left: 16px;
+  margin-left: 12px;
   margin-bottom: 0;
 `;
 
@@ -27,7 +27,7 @@ DriverType.propTypes = { driverType: PropTypes.string.isRequired };
 
 
 export const ProfileImage = styled.div`
-  background: url(${(props) => props.src}), url(${Placeholder}) 50% 0%;
+  background: url(${(props) => props.src}) 50% 0%, url(${Placeholder}) 50% 0%;
   background-size: cover;
   width: ${(props) => props.size}px;
   height:${(props) => props.size}px;
@@ -56,10 +56,10 @@ export const CardHiddenText = CardText.extend`
 
 export const CardWrapper = styled.div`
   height: 240px;
-  width: 174px;
+  width: 172px;
   background: white;
-  border-radius: 10px;
-  padding: 14px 10px;
+  border-radius: 3px;
+  padding: 14px 14px;
 
   &:hover {
     box-shadow: 0px 0px 10px #c0c0c0;

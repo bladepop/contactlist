@@ -234,27 +234,31 @@ const data = [
 ];
 
 const ContactList = styled.div`
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  
+  
 `;
 
-const CardWrapper = styled.div`
+const ItemWrapper = styled.div`
   display: block;
   margin: 5px;
-  flex: auto;
 `;
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <main style={{ padding: '30px' }}>
+      <main style={{ padding: '76px 0' }}>
         <ContactList>
-          { data.map((driver, i) => <CardWrapper key={i}><ContactCard contact={driver} /></CardWrapper>)}
+          { data.map((driver, i) =>
+            (<ItemWrapper key={i}>
+              <ContactCard contact={driver} />
+            </ItemWrapper>))}
         </ContactList>
       </main>
     );
