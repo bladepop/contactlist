@@ -28,7 +28,7 @@ import messages from './messages';
 
 export class ContactsPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loadContacts();
   }
 
